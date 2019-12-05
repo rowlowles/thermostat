@@ -1,0 +1,22 @@
+git diff    <<<  see changes I made line by line locally
+
+git status  <<<  see the files I changed
+
+git add .  <<< add all files to be commited in the local change log
+
+git status  <<<  did it work ??
+
+git commit -m "learning github with some basic changes"
+	- m  <<<< message
+	"  the message"
+
+git push origin master 
+	push  <<< push the change to the github cloud
+	origin  <<<<  neededgit st when you have multiple git hub
+	master  <<< the master not a branch
+
+git fetch   <<< compares local with github repository
+
+git pull   <<<  grabs the lastes version from the github repository
+g
+		
