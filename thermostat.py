@@ -2,9 +2,6 @@ print(' STARTING...\n')
 import wirelesstagpy
 from tkinter import *
 
-
-
-
 # read the sensors
 api = wirelesstagpy.WirelessTags(username='rob.lowles@gmail.com', password='3scope14')
 tags = api.load_tags()
@@ -19,8 +16,6 @@ for (uuid, tag) in tags.items():
  #       mainTemp = tag.temperature
 mainTemp= alltags['Main room']
 upstair = alltags['upstairs']
-
-
 
 print('\n take action')
 
@@ -57,6 +52,7 @@ invisable = Label(rot, text='  ')  #  space the buttons out
 
 main = 'MAIN\n' + str(mainTemp)[:4]
 
+# Define a list of buttons for the UI
 button1 = Button(rot, text = main, fg = 'red', bg = 'black')
 button2 = Button(rot, text = 'upstairs\n' + str(upstair)[:4], fg = 'blue')
 button3 = Button(rot, text = 'BASEMENT\n', fg = 'red')
