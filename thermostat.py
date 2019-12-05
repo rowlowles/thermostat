@@ -53,8 +53,8 @@ invisable = Label(rot, text='  ')  #  space the buttons out
 main = 'MAIN\n' + str(mainTemp)[:4]
 
 # Define a list of buttons for the UI
-button1 = Button(rot, text = main, fg = 'red', bg = 'black')
-button2 = Button(rot, text = 'upstairs\n' + str(upstair)[:4], fg = 'blue')
+button1 = Button(rot, text = main, fg = 'white', bg = 'black')
+button2 = Button(rot, text = 'upstairs\n' + str(upstair)[:4], fg = 'white', bg = 'orange')
 button3 = Button(rot, text = 'BASEMENT\n', fg = 'red')
 button4 = Button(rot, text = ' GARAGE \n', fg = 'red')
 # place the buttons
