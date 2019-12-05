@@ -1,3 +1,11 @@
+
+To update Github repository 3 steps are required:
+	git add . 
+	git commit -m "message"
+	git push origin master 
+
+
+
 git diff    <<<  see changes I made line by line locally
 
 git status  <<<  see the files I changed
