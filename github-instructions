@@ -1,5 +1,6 @@
 
 To update Github repository 3 steps are required:
+	change to the working directory
 	git add . 
 	git commit -m "message"
 	git push origin master 

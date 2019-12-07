@@ -34,13 +34,22 @@ for (uuid, tag) in currentTagData.items():
     if (tag.temperature > roomLimits[tag.name][1]):
         print('Turn off heater for {}'.format(tag.name))
 
+
 print ('  grab a temp ', mainTemp)
 print(' \n\ngenerating GUI..\n')
+
+def button1action(event) :
+    print ('button 1 pressed')
+
+
+
+
+
 
 
 rot = Tk()
 rot.geometry("240x320+1000+500")
-rot.configure(bg = 'black')
+rot.configure(bg = 'grey')
 #define the windows and frames
 #topframe = Frame(rot)
 #topframe.pack()
@@ -49,41 +58,51 @@ rot.configure(bg = 'black')
 
 # Define a frame for each button and place the frames on a grid
 button1frame = Frame(rot, bg = 'black', height = "100", width = '100', relief= 'groove')
+
+button1frame.grid(row=1, column= 1)
+button1frame.focus_force()
+button1frame.bind("<Button-1>", button1action)
+label1a = Label(button1frame, text = "main", fg = 'white', bg = 'black', font=("Helvetica", 15) )
+label1a.pack()
+
+
+# bind does not work on the frame if there is a label on it. 
+
+
+
+
+
 button2frame = Frame(rot,bg = 'black')
 button3frame = Frame(rot,bg = 'black')
 button4frame = Frame(rot,bg = 'black')
 invisable = Label(rot, text='  ')  #  space the buttons out
 
 invisable.grid(row = 1, column = 2)
-button1frame.grid(row=1, column= 1)
 button2frame.grid(row=1, column= 3)
 button3frame.grid(row=2, column= 1)
 button4frame.grid(row=2, column= 3)
+
+
 
 print(' \n\nframes generated, now place the buttons in each frame..\n')
 
 # Each frame has several label, with different fount sizes plus 1 button
 
 label1a = Label(button1frame, text = "main", fg = 'white', bg = 'black', font=("Helvetica", 15) )
-label1b = Label(button1frame, text = str(mainTemp)[:4],  fg = 'white', bg = 'black',  font=("Helvetica", 20))
-label1c = Label(button1frame, text = 'set = ' +  str(roomLimits['Main room'][0]) , fg = 'white', bg = 'black',  font=("Helvetica",10))
+#label1b = Label(button1frame, text = str(mainTemp)[:4],  fg = 'white', bg = 'black',  font=("Helvetica", 20))
+#label1c = Label(button1frame, text = 'set = ' +  str(roomLimits['Main room'][0]) , fg = 'white', bg = 'black',  font=("Helvetica",10))
 label1a.pack()
-label1b.pack()
-label1c.pack()
-button1 = Button(button1frame,  bg = 'white',height = "2", width = '2')
-button1.pack()
-#  maybe use three button that have the same action 
+#label1b.pack()
+#label1c.pack()
+
 
 
 button2 = Button(button2frame, text = 'upstairs\n' + str(upstair)[:4], fg = 'white', bg = 'orange')
 button3 = Button(button3frame, text = 'BASEMENT\n', fg = 'red')
-label3 = Label(button3frame,text = 'hello', font=("Helvetica", 5))
 button4 = Button(button4frame, text = ' GARAGE \n', fg = 'red')
 
-#button1.pack()
 button2.pack()
 button3.pack()
-label3.pack()
 button4.pack()
 
 
